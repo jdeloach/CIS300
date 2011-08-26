@@ -1,0 +1,9 @@
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Calculator\JordanDeLoach.Cis300.Calculator\bin\Debug\JordanDeLoach.Cis300.Calculator.exe
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Calculator\JordanDeLoach.Cis300.Calculator\bin\Debug\JordanDeLoach.Cis300.Calculator.pdb
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Calculator\JordanDeLoach.Cis300.Calculator\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Calculator\JordanDeLoach.Cis300.Calculator\obj\x86\Debug\JordanDeLoach.Cis300.Calculator.Calculator.resources
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Calculator\JordanDeLoach.Cis300.Calculator\obj\x86\Debug\JordanDeLoach.Cis300.Calculator.Properties.Resources.resources
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Calculator\JordanDeLoach.Cis300.Calculator\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Calculator\JordanDeLoach.Cis300.Calculator\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Calculator\JordanDeLoach.Cis300.Calculator\obj\x86\Debug\JordanDeLoach.Cis300.Calculator.exe
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Calculator\JordanDeLoach.Cis300.Calculator\obj\x86\Debug\JordanDeLoach.Cis300.Calculator.pdb
