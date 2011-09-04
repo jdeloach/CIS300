@@ -256,6 +256,7 @@
             this.uxEnter.TabIndex = 20;
             this.uxEnter.Text = "Enter";
             this.uxEnter.UseVisualStyleBackColor = true;
+            this.uxEnter.Click += new System.EventHandler(this.uxEnter_Click);
             // 
             // uxClearScreen
             // 

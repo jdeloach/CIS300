@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -15,6 +15,7 @@ namespace JordanDeLoach.Cis300.Calculator
         /// Boolean to tell wether or not the Calculator is currently in display mode or not.
         /// </summary>
         private bool _display = true;
+        private Stack _stack = new Stack();
 
         public Calculator()
         {
@@ -64,8 +65,71 @@ namespace JordanDeLoach.Cis300.Calculator
         /// <param name="operation"></param>
         private void EnterBinaryOperator(char operation)
         {
+
+
+            if (!_display)
+            {
+                HandleEnterButton();
+            }
+            _stack.Push(operation);
             _display = true;
             // TODO implement next assignment
+        }
+
+        /// <summary>
+        /// Handles a binary operation.
+        /// </summary>
+        /// <param name="operation">The operator to be used</param>
+        /// <param name="firstOperand">The first value</param>
+        /// <param name="secondOperand">The second value</param>
+        private double PerformBinaryOperation(char operation, double firstOperand, double secondOperand)
+        {
+            if (operation == '+')
+            {
+                return firstOperand + secondOperand;
+            }
+            else if(operation == '-')
+            {
+                return firstOperand - secondOperand;
+            }
+            else if (operation == 'X')
+            {
+                return firstOperand * secondOperand;
+            }
+            else
+            {
+                return firstOperand / secondOperand;
+            }
+        }
+
+        /// <summary>
+        /// Handles when the enter button is placed, taking stuff off the stack, computing, etc.
+        /// </summary>
+        private void HandleEnterButton()
+        {
+            _display = true;
+            double currentOperand = Convert.ToDouble(uxResult.Text);
+
+            while((_stack.Count > 0) && ((_stack.Peek() is string) || (_stack.Peek() is double)))           
+            {
+                if (_stack.Peek() is double)
+                {
+                    double top = (double)_stack.Pop();
+                    char operation = (char)_stack.Pop();
+                    currentOperand = PerformBinaryOperation(operation, top, currentOperand);
+                }
+                else if (_stack.Peek() is string)
+                {
+                    currentOperand = currentOperand * -1;
+                }
+            }
+
+            uxResult.Text = currentOperand.ToString();
+
+            if (_stack.Count > 0)
+            {
+                _stack.Push(currentOperand);
+            }
         }
 
         /// <summary>
@@ -76,6 +140,7 @@ namespace JordanDeLoach.Cis300.Calculator
         private void uxClearScreen_Click(object sender, EventArgs e)
         {
             ClearDisplay();
+            _stack.Clear();
         }
 
         /// <summary>
@@ -236,6 +301,11 @@ namespace JordanDeLoach.Cis300.Calculator
             {
                 AddToDisplay(".");
             }
+        }
+
+        private void uxEnter_Click(object sender, EventArgs e)
+        {
+            HandleEnterButton();
         }
     }
 }
