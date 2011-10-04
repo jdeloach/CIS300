@@ -1,0 +1,5 @@
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Queue\JordanDeLoach.Cis300.Queue\bin\Debug\JordanDeLoach.Cis300.Queue.dll
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Queue\JordanDeLoach.Cis300.Queue\bin\Debug\JordanDeLoach.Cis300.Queue.pdb
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Queue\JordanDeLoach.Cis300.Queue\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Queue\JordanDeLoach.Cis300.Queue\obj\Debug\JordanDeLoach.Cis300.Queue.dll
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Queue\JordanDeLoach.Cis300.Queue\obj\Debug\JordanDeLoach.Cis300.Queue.pdb

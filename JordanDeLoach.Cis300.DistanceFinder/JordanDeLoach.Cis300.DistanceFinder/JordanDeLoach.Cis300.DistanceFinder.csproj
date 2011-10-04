@@ -76,6 +76,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\JordanDeLoach.Cis300.Queue\JordanDeLoach.Cis300.Queue\JordanDeLoach.Cis300.Queue.csproj">
+      <Project>{FA08FCD2-2925-4AD4-9A36-76499CE3A9E3}</Project>
+      <Name>JordanDeLoach.Cis300.Queue</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

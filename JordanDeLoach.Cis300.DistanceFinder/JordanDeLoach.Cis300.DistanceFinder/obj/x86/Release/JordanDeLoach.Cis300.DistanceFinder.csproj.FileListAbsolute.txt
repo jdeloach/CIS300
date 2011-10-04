@@ -1,0 +1,5 @@
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.DistanceFinder\JordanDeLoach.Cis300.DistanceFinder\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.DistanceFinder\JordanDeLoach.Cis300.DistanceFinder\obj\x86\Release\JordanDeLoach.Cis300.DistanceFinder.uxDistancefinder.resources
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.DistanceFinder\JordanDeLoach.Cis300.DistanceFinder\obj\x86\Release\JordanDeLoach.Cis300.DistanceFinder.Properties.Resources.resources
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.DistanceFinder\JordanDeLoach.Cis300.DistanceFinder\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.DistanceFinder\JordanDeLoach.Cis300.DistanceFinder\obj\x86\Release\GenerateResource.write.1.tlog
