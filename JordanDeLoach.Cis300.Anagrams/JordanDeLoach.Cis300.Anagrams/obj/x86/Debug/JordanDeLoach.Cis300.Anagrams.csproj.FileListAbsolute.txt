@@ -1,0 +1,10 @@
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Anagrams\JordanDeLoach.Cis300.Anagrams\bin\Debug\JordanDeLoach.Cis300.Anagrams.exe
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Anagrams\JordanDeLoach.Cis300.Anagrams\bin\Debug\JordanDeLoach.Cis300.Anagrams.pdb
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Anagrams\JordanDeLoach.Cis300.Anagrams\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Anagrams\JordanDeLoach.Cis300.Anagrams\obj\x86\Debug\JordanDeLoach.Cis300.Anagrams.uxAnagrams.resources
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Anagrams\JordanDeLoach.Cis300.Anagrams\obj\x86\Debug\JordanDeLoach.Cis300.Anagrams.Properties.Resources.resources
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Anagrams\JordanDeLoach.Cis300.Anagrams\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Anagrams\JordanDeLoach.Cis300.Anagrams\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Anagrams\JordanDeLoach.Cis300.Anagrams\obj\x86\Debug\JordanDeLoach.Cis300.Anagrams.exe
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Anagrams\JordanDeLoach.Cis300.Anagrams\obj\x86\Debug\JordanDeLoach.Cis300.Anagrams.pdb
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Anagrams\JordanDeLoach.Cis300.Anagrams\bin\Debug\RodHowell.Cis300.ConsList.dll
