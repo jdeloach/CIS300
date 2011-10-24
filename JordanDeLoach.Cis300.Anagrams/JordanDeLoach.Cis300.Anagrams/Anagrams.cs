@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using RodHowell.Cis300.ConsList;
+using KansasStateUniversity.TreeViewer2;
 
 namespace JordanDeLoach.Cis300.Anagrams
 {
@@ -22,6 +23,11 @@ namespace JordanDeLoach.Cis300.Anagrams
         /// File name of the dictionary to open
         /// </summary>
         private const String WordFile = "dictionary.txt";
+
+        /// <summary>
+        /// A binary tree of found anagrams
+        /// </summary>
+        private StringSet FoundAnagrams = new StringSet();
 
         /// <summary>
         /// Words loaded from dictionary
@@ -43,18 +49,9 @@ namespace JordanDeLoach.Cis300.Anagrams
 
             try
             {
-                using (StreamReader input = File.OpenText(WordFile))
-                {
-                    TrieNode current = new TrieNode();
-
+                using (StreamReader input = File.OpenText(WordFile))        
                     for (int i = 0; i < _wordList.Length; i++)
-                    {
-                        for (int j = 0; j < _wordList[i].Length; j++)
-                            if(current.Children[_wordList[i][j]-96] == null)
-                                
-                            
-                    }
-                }
+                        _wordList[i] = input.ReadLine();                             
             }
             catch (Exception e)
             {
@@ -78,7 +75,7 @@ namespace JordanDeLoach.Cis300.Anagrams
         /// </summary>
         /// <param name="s">ConsList of prefix's</param>
         /// <returns>A stringbuilder with spaces seperating prefixes</returns>
-        private StringBuilder BuildStringBuilder(ConsList<string> s)
+        private string BuildStringBuilder(ConsList<string> s)
         {
             StringBuilder st = new StringBuilder();
             while (s != null)
@@ -86,7 +83,7 @@ namespace JordanDeLoach.Cis300.Anagrams
                 st.Append(s.Head + " ");
                 s = s.Tail;
             }
-            return st;
+            return st.ToString();
         }
         
         /// <summary>
@@ -124,11 +121,11 @@ namespace JordanDeLoach.Cis300.Anagrams
                 if (ContainsWord(prefixPart)) 
                 {
                     prefixComplete = new ConsList<string>(prefixPart.ToString(), prefixComplete);
-                    uxListBox.Items.Add(BuildStringBuilder(prefixComplete).ToString());
+                    FoundAnagrams.Add(BuildStringBuilder(prefixComplete).ToString());
                 }
                 else if (prefixPart.Length == 0)
                 {
-                    uxListBox.Items.Add(BuildStringBuilder(prefixComplete).ToString());
+                    FoundAnagrams.Add(BuildStringBuilder(prefixComplete).ToString());
                 }
             }
             else
@@ -152,6 +149,27 @@ namespace JordanDeLoach.Cis300.Anagrams
         /// <returns>True/False depending on if it was found</returns>
         private bool ContainsWord(StringBuilder word)
         {
+            int start = 0;
+            int end = _wordList.Length;
+
+            while (start < end)
+            {
+                int mid = (start + end) / 2;
+
+                if (CompareStringBuilder(word, _wordList[mid]) > 0)
+                {
+                    start = mid + 1;
+                }
+                else
+                {
+                    end = mid;
+                }
+            }
+
+            if (0 <= start && start <= _wordList.Length - 1)
+                if (_wordList[start] == word.ToString())
+                    return true;
+
             return false;
         }
 
@@ -163,11 +181,15 @@ namespace JordanDeLoach.Cis300.Anagrams
         private void uxFindAnagrams_Click(object sender, EventArgs e)
         {
             uxListBox.Items.Clear();
+            FoundAnagrams = new StringSet();
             uxString.Text = uxString.Text.ToLower();
             GetAnagrams(new ConsList<string>("", null), new StringBuilder(""), BuildQueue(uxString.Text.Trim()));
-            //if(ContainsWord(new StringBuilder(uxString.Text)))
-            //uxListBox.Items.Add(CompareStringBuilder(new StringBuilder("rawr"), uxString.Text));    
-                //uxListBox.Items.Add("Finished");
+            FoundAnagrams.AddAll(uxListBox.Items);
+
+            TreeForm form = new TreeForm(FoundAnagrams, 100);
+            form.Text = uxString.Text;
+            form.Show();
+
             uxAnagramCount.Text = "" + uxListBox.Items.Count;         
         }
         
