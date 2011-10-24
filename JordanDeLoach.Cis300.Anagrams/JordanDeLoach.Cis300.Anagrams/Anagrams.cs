@@ -44,8 +44,17 @@ namespace JordanDeLoach.Cis300.Anagrams
             try
             {
                 using (StreamReader input = File.OpenText(WordFile))
+                {
+                    TrieNode current = new TrieNode();
+
                     for (int i = 0; i < _wordList.Length; i++)
-                        _wordList[i] = input.ReadLine().Trim();
+                    {
+                        for (int j = 0; j < _wordList[i].Length; j++)
+                            if(current.Children[_wordList[i][j]-96] == null)
+                                
+                            
+                    }
+                }
             }
             catch (Exception e)
             {
@@ -143,27 +152,6 @@ namespace JordanDeLoach.Cis300.Anagrams
         /// <returns>True/False depending on if it was found</returns>
         private bool ContainsWord(StringBuilder word)
         {
-            int start = 0;
-            int end = _wordList.Length;
-
-            while (start < end)
-            {
-                int mid = (start + end) / 2;
-
-                if (CompareStringBuilder(word, _wordList[mid]) > 0)
-                {
-                    start = mid + 1;
-                }
-                else
-                {
-                    end = mid; 
-                }
-            }
-
-            if (0 <= start && start <= _wordList.Length-1)
-                if (_wordList[start] == word.ToString())
-                    return true;
-
             return false;
         }
 

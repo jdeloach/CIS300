@@ -57,6 +57,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrieNode.cs" />
     <EmbeddedResource Include="Anagrams.resx">
       <DependentUpon>Anagrams.cs</DependentUpon>
     </EmbeddedResource>
