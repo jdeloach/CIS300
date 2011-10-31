@@ -1,0 +1,9 @@
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeloach.Cis300.Tries\JordanDeloach.Cis300.Tries\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeloach.Cis300.Tries\JordanDeloach.Cis300.Tries\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeloach.Cis300.Tries\JordanDeloach.Cis300.Tries\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeloach.Cis300.Tries\JordanDeloach.Cis300.Tries\obj\x86\Debug\JordanDeLoach.Cis300.Tries.UserInterface.resources
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeloach.Cis300.Tries\JordanDeloach.Cis300.Tries\bin\Debug\JordanDeLoach.Cis300.Tries.exe
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeloach.Cis300.Tries\JordanDeloach.Cis300.Tries\bin\Debug\JordanDeLoach.Cis300.Tries.pdb
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeloach.Cis300.Tries\JordanDeloach.Cis300.Tries\obj\x86\Debug\JordanDeLoach.Cis300.Tries.Properties.Resources.resources
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeloach.Cis300.Tries\JordanDeloach.Cis300.Tries\obj\x86\Debug\JordanDeLoach.Cis300.Tries.exe
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeloach.Cis300.Tries\JordanDeloach.Cis300.Tries\obj\x86\Debug\JordanDeLoach.Cis300.Tries.pdb
