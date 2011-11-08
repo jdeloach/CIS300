@@ -54,11 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinaryTreeNode.cs" />
+    <Compile Include="CharMap.cs" />
+    <Compile Include="ImmutableTrie.cs" />
     <Compile Include="ITrie.cs" />
     <Compile Include="MultipleChildren.cs" />
     <Compile Include="NoChildren.cs" />
     <Compile Include="OneChild.cs" />
-    <Compile Include="StringSet.cs" />
     <Compile Include="UserInterface.cs">
       <SubType>Form</SubType>
     </Compile>

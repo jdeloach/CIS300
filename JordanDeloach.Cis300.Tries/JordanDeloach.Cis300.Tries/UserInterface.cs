@@ -8,7 +8,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using RodHowell.Cis300.ConsList;
-using KansasStateUniversity.TreeViewer2;
 
 namespace JordanDeLoach.Cis300.Tries
 {
@@ -38,9 +37,9 @@ namespace JordanDeLoach.Cis300.Tries
         private const string _dictionaryFile = "dictionary.txt";
 
         /// <summary>
-        /// The current set of anagrams found.
+        /// Character to incides map
         /// </summary>
-        private StringSet _anagrams = null;
+        private CharMap _map;
 
         /// <summary>
         /// Constructs the GUI.
@@ -95,10 +94,24 @@ namespace JordanDeLoach.Cis300.Tries
         private void uxFind_Click(object sender, EventArgs e)
         {
             uxAnagrams.Items.Clear();
-            _anagrams = new StringSet();
-            FindAnagrams(new StringBuilder(), trie, GetQueue(uxInput.Text.ToLower()));
-            _anagrams.CopyTo(uxAnagrams.Items);
-            uxNumber.Text = uxAnagrams.Items.Count.ToString();
+
+            if (uxInput.Text == "")
+                uxNumber.Text = "0";
+            else
+            {
+                try
+                {
+                    _map = new CharMap(uxInput.Text.ToLower().ToCharArray());
+                    ImmutableTrie results = FindAnagrams(trie, GetQueue(uxInput.Text.ToLower().ToCharArray()));
+                    if (results != null)
+                        results.CopyToList(uxAnagrams.Items);    
+                    uxNumber.Text = uxAnagrams.Items.Count.ToString();
+                }
+                catch (ArgumentException ae)
+                {
+                    MessageBox.Show("Text can only be lower case letters. " + ae.Message);
+                }
+            }
         }
 
         /// <summary>
@@ -107,10 +120,10 @@ namespace JordanDeLoach.Cis300.Tries
         /// <param name="s">The string from which the queue is to be 
         /// derived.</param>
         /// <returns>A queue containing the characters of s.</returns>
-        private Queue<char> GetQueue(string s)
+        private Queue<char> GetQueue(char[] chars)
         {
             Queue<char> q = new Queue<char>();
-            foreach (char c in s)
+            foreach (char c in chars)
             {
                 q.Enqueue(c);
             }
@@ -130,36 +143,45 @@ namespace JordanDeLoach.Cis300.Tries
         /// the prefix for the first word in each anagram.</param>
         /// <param name="chars">The characters for which to find
         /// anagrams.</param>
-        private void FindAnagrams(StringBuilder prefix, ITrie lastWord, Queue<char> chars)
+        private ImmutableTrie FindAnagrams(ITrie lastWord, Queue<char> chars)
         {
             if (lastWord == null)
-                return;
+                return null;
+
+            ImmutableTrie[] tries = new ImmutableTrie[_map.CharacterCount];
 
             if (chars.Count == 0)
             {
                 if (lastWord.IsEmpty())
                 {
-                    _anagrams.Add(prefix.ToString());
+                    tries[_map.GetLocation(' ')] = new ImmutableTrie(new ImmutableTrie[0], true, _map);
+                    //_anagrams.Add(prefix.ToString());
                 }
-                else if (prefix.Length == 0)
-                    _anagrams.Add("");
+                else //if (prefix.Length == 0)
+                    return null;
+                    //_anagrams.Add("");
             }
             else
             {
                 if (lastWord.IsEmpty())
                 {
-                    FindAnagrams(prefix.Append(" "), trie, chars);
-                    prefix.Remove(prefix.Length - 1, 1);
+                    //char x = chars.Dequeue();
+                    tries[_map.GetLocation(' ')] = FindAnagrams(trie, chars);
+                    //chars.Enqueue(x);
+                    //tries[_map.GetLocation(' ')] = new ImmutableTrie(new ImmutableTrie[0], true, _map);
                 }
+                char c = 'Z';
                 for (int i = 0; i < chars.Count; i++)
                 {
-                    char c = chars.Dequeue();
-                    prefix.Append(c);
-                    FindAnagrams(prefix, lastWord.Continuations(c), chars);
-                    prefix.Remove(prefix.Length - 1, 1);
+                    //if (c == chars.Peek())
+                      //  continue;
+                    c = chars.Dequeue();
+                    tries[_map.GetLocation(c)] = FindAnagrams(lastWord.Continuations(c), chars);
                     chars.Enqueue(c);
                 }
             }
+
+            return new ImmutableTrie(tries, false, _map);
         }
 
         /// <summary>
