@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1D56453E-73E0-44CE-843E-6E849DB333A3}</ProjectGuid>
+    <ProjectGuid>{7E21E49F-A1A0-4FBE-AF66-9026617F3F25}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JordanDeLoach.Cis300.Tries</RootNamespace>
-    <AssemblyName>JordanDeLoach.Cis300.Tries</AssemblyName>
+    <RootNamespace>JordanDeLoach.Cis300.FileCompressor</RootNamespace>
+    <AssemblyName>JordanDeLoach.Cis300.FileCompressor</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -34,12 +34,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="KansasStateUniversity.TreeViewer2">
-      <HintPath>..\..\..\..\..\Visual Studio 2008\Projects\KSU\KansasStateUniversity.TreeViewer2\KansasStateUniversity.TreeViewer\bin\Release\KansasStateUniversity.TreeViewer2.dll</HintPath>
-    </Reference>
-    <Reference Include="RodHowell.Cis300.ConsList, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="KansasStateUniversity.TreeViewer2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\RodHowell.Cis300.ConsList\RodHowell.Cis300.ConsList\bin\Debug\RodHowell.Cis300.ConsList.dll</HintPath>
+      <HintPath>bin\Debug\KansasStateUniversity.TreeViewer2.dll</HintPath>
+    </Reference>
+    <Reference Include="RodHowell.Cis300.BitIO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\RodHowell.Cis300.BitIO.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,21 +55,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinaryTreeNode.cs" />
-    <Compile Include="CharMap.cs" />
-    <Compile Include="ImmutableTrie.cs" />
-    <Compile Include="ITrie.cs" />
-    <Compile Include="Key.cs" />
-    <Compile Include="MultipleChildren.cs" />
-    <Compile Include="NoChildren.cs" />
-    <Compile Include="OneChild.cs" />
     <Compile Include="UserInterface.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserInterface.Designer.cs">
       <DependentUpon>UserInterface.cs</DependentUpon>
     </Compile>
+    <Compile Include="MinPriorityQueue.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UserInterface.resx">
+      <DependentUpon>UserInterface.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -77,11 +75,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserInterface.resx">
-      <DependentUpon>UserInterface.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

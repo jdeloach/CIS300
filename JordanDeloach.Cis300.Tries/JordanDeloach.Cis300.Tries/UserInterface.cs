@@ -42,6 +42,11 @@ namespace JordanDeLoach.Cis300.Tries
         private CharMap _map;
 
         /// <summary>
+        /// Dictionary for the hash table.
+        /// </summary>
+        private Dictionary<Key, ImmutableTrie> _dictionary;
+
+        /// <summary>
         /// Constructs the GUI.
         /// </summary>
         public UserInterface()
@@ -94,6 +99,7 @@ namespace JordanDeLoach.Cis300.Tries
         private void uxFind_Click(object sender, EventArgs e)
         {
             uxAnagrams.Items.Clear();
+            _dictionary = new Dictionary<Key, ImmutableTrie>();
 
             if (uxInput.Text == "")
                 uxNumber.Text = "0";
@@ -149,13 +155,25 @@ namespace JordanDeLoach.Cis300.Tries
                 return null;
 
             ImmutableTrie[] tries = new ImmutableTrie[_map.CharacterCount];
+            bool nonNull = false;
 
             if (chars.Count == 0)
             {
                 if (lastWord.IsEmpty())
                 {
-                    tries[_map.GetLocation(' ')] = new ImmutableTrie(new ImmutableTrie[0], true, _map);
-                    //_anagrams.Add(prefix.ToString());
+                    Key k = new Key(chars, _map);
+                    ImmutableTrie result = null;
+                    if (_dictionary.TryGetValue(k, out result))
+                    {
+                        tries[_map.GetLocation(' ')] = result;
+                    }
+                    else
+                    {
+                        tries[_map.GetLocation(' ')] = new ImmutableTrie(new ImmutableTrie[0], true, _map);
+                        _dictionary.Add(k, tries[_map.GetLocation(' ')]);
+                    }
+                    if(tries[_map.GetLocation(' ')] != null)
+                        nonNull = true;
                 }
                 else //if (prefix.Length == 0)
                     return null;
@@ -167,6 +185,8 @@ namespace JordanDeLoach.Cis300.Tries
                 {
                     //char x = chars.Dequeue();
                     tries[_map.GetLocation(' ')] = FindAnagrams(trie, chars);
+                    if (tries[_map.GetLocation(' ')] != null)
+                        nonNull = true;
                     //chars.Enqueue(x);
                     //tries[_map.GetLocation(' ')] = new ImmutableTrie(new ImmutableTrie[0], true, _map);
                 }
@@ -177,11 +197,14 @@ namespace JordanDeLoach.Cis300.Tries
                       //  continue;
                     c = chars.Dequeue();
                     tries[_map.GetLocation(c)] = FindAnagrams(lastWord.Continuations(c), chars);
+                    if (tries[_map.GetLocation(c)] != null)
+                        nonNull = true;
                     chars.Enqueue(c);
                 }
             }
-
-            return new ImmutableTrie(tries, false, _map);
+            if(nonNull)
+                return new ImmutableTrie(tries, false, _map);
+            return null;
         }
 
         /// <summary>

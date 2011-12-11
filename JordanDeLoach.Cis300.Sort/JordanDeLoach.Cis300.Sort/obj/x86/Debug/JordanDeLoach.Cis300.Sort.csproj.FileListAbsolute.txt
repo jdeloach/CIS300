@@ -1,0 +1,9 @@
+c:\users\jdeloach\documents\visual studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Sort\JordanDeLoach.Cis300.Sort\bin\Debug\JordanDeLoach.Cis300.Sort.exe
+c:\users\jdeloach\documents\visual studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Sort\JordanDeLoach.Cis300.Sort\bin\Debug\JordanDeLoach.Cis300.Sort.pdb
+c:\users\jdeloach\documents\visual studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Sort\JordanDeLoach.Cis300.Sort\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\jdeloach\documents\visual studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Sort\JordanDeLoach.Cis300.Sort\obj\x86\Debug\JordanDeLoach.Cis300.Sort.Properties.Resources.resources
+c:\users\jdeloach\documents\visual studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Sort\JordanDeLoach.Cis300.Sort\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\jdeloach\documents\visual studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Sort\JordanDeLoach.Cis300.Sort\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\jdeloach\documents\visual studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Sort\JordanDeLoach.Cis300.Sort\obj\x86\Debug\JordanDeLoach.Cis300.Sort.exe
+c:\users\jdeloach\documents\visual studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Sort\JordanDeLoach.Cis300.Sort\obj\x86\Debug\JordanDeLoach.Cis300.Sort.pdb
+c:\users\jdeloach\documents\visual studio 2010\Projects\CIS300\JordanDeLoach.Cis300.Sort\JordanDeLoach.Cis300.Sort\obj\x86\Debug\JordanDeLoach.Cis300.Sort.UserInterface.resources

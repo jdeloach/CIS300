@@ -1,0 +1,9 @@
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.FileCompressor\JordanDeLoach.Cis300.FileCompressor\bin\Debug\JordanDeLoach.Cis300.FileCompressor.exe
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.FileCompressor\JordanDeLoach.Cis300.FileCompressor\bin\Debug\JordanDeLoach.Cis300.FileCompressor.pdb
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.FileCompressor\JordanDeLoach.Cis300.FileCompressor\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.FileCompressor\JordanDeLoach.Cis300.FileCompressor\obj\x86\Debug\JordanDeLoach.Cis300.FileCompressor.Properties.Resources.resources
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.FileCompressor\JordanDeLoach.Cis300.FileCompressor\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.FileCompressor\JordanDeLoach.Cis300.FileCompressor\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.FileCompressor\JordanDeLoach.Cis300.FileCompressor\obj\x86\Debug\JordanDeLoach.Cis300.FileCompressor.exe
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.FileCompressor\JordanDeLoach.Cis300.FileCompressor\obj\x86\Debug\JordanDeLoach.Cis300.FileCompressor.pdb
+C:\Users\jdeloach\Documents\Visual Studio 2010\Projects\CIS300\JordanDeLoach.Cis300.FileCompressor\JordanDeLoach.Cis300.FileCompressor\obj\x86\Debug\JordanDeLoach.Cis300.FileCompressor.UserInterface.resources
